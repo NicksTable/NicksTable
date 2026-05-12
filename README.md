@@ -2,18 +2,20 @@
 
 **Game Developer • Gameplay Programmer • Generalist**
 
+🌐 **Portfolio:** https://nickstable.github.io/NicksTable/
+
 I build gameplay systems and interactive experiences using Roblox Studio, Unity, and Unreal Engine. My focus is on clean, modular, and scalable code, with hands-on experience across both programming and content creation.
 
 ---
 
 ## Contact
 
-- Location: [Bologna]
-- Email: [nicholas.marignani@gmail.com]
-- Phone: [+39 339 154 0130]
-- Discord: [nickstable]
-- YouTube: [youtube.com/@thetable8175]
-- GitHub: [github.com/NicksTable]
+- Location: Bologna, Italy
+- Email: nicholas.marignani@gmail.com
+- Phone: +39 339 154 0130
+- Discord: nickstable
+- YouTube: https://youtube.com/@thetable8175
+- GitHub: https://github.com/NicksTable
 
 ---
 
@@ -93,4 +95,4 @@ Grade: **86/100**
 
 ## Interests
 
-Cats • Judo • Salsa & Bachata • Other Music (Metal, Anime, ...) • Physics • Anime • Video Games
+Cats • Judo • Salsa & Bachata • Physics • Anime • Video Games • Metal & Anime Music
