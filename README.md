@@ -95,4 +95,4 @@ Grade: **86/100**
 
 ## Interests
 
-Cats • Judo • Salsa & Bachata • Physics • Anime • Video Games • Metal & Anime Music
+Cats • Judo • Physics • Anime • Video Games • Salsa & Bachata • Other Music (Metal, Anime, ...)
