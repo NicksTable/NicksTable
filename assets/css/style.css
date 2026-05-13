@@ -180,3 +180,67 @@ h2 {
     justify-content: center;
   }
 }
+
+/* Align the video to the bottom of the left column */
+.project-showcase {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: end; /* bottom-align both columns */
+  margin-top: 2rem;
+}
+
+/* Make the video container stick to the bottom */
+.project-video {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.project-video iframe,
+.project-video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 16px;
+}
+
+/* Right column */
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Ensure ALL h3 titles have the same style */
+.project-block h3,
+.project-details h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Lists */
+.project-details ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.project-details li {
+  margin-bottom: 0.35rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .project-showcase {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .project-video {
+    align-items: stretch;
+  }
+}

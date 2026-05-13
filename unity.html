@@ -7,19 +7,150 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">NicksTable</a>
+      <ul class="nav-links">
+        <li><a href="me.html">Me</a></li>
+        <li><a href="roblox.html">Roblox</a></li>
+        <li><a href="unity.html">Unity</a></li>
+        <li><a href="unreal.html">Unreal</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="container page">
     <a class="back-link" href="index.html">← Home</a>
 
-    <h1>Unreal Projects</h1>
+    <h1>Unity Projects</h1>
 
     <section class="project-block">
-      <h2>Project Title</h2>
+      <h2>Feline Fantasy</h2>
       <p>Project description goes here.</p>
 
       <div class="media-grid">
         <img src="assets/img/example.jpg" alt="Project screenshot">
         <!-- Or embed YouTube videos using iframe -->
       </div>
+    </section>
+
+    <br>
+
+    <section class="project-block">
+      <h2>Project Fear</h2>
+      <p>
+        <strong>Genre:</strong> Cooperative Survival Horror<br />
+        <strong>Development Time:</strong> ~1.5 months<br />
+        <strong>Team Size:</strong> 3 Developers (2 Programmers, 1 Game/Level/Sound Designer)
+      </p>
+
+      <p>
+        <strong>Role:</strong><br />
+        Programmer
+      </p>
+
+      <p>
+        Established the project's modular code architecture by separating responsibilities
+        into reusable micro-components across all major gameplay systems, including:
+      </p>
+      <ul>
+        <li>Input</li>
+        <li>AI</li>
+        <li>Players</li>
+        <li>Characters (Entities)</li>
+        <li>Stats</li>
+        <li>Abilities (shared and fully compatible between both AI and Player characters)</li>
+      </ul>
+
+      <div class="project-showcase">
+        <!-- Left Column -->
+        <div class="project-video">
+          <video controls preload="metadata">
+            <source src="assets/mp4/unity/ProjectFear.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Right Column -->
+        <div class="project-details">
+          <div>
+            <h3>Technical Notes</h3>
+            <p>
+              The gameplay shown in the video does not fully represent the capabilities of the implemented systems,
+              as the project was still under active development at the time of recording.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      
+      <h3>Systems Developed</h3>
+      <ul>
+        <li>
+          Combat System
+          <ul>
+            <li>Centralized "arbiter" responsible for handling shared logic across multiple abilities</li>
+          </ul>
+        </li>
+
+        <li>
+          Status Effect System
+          <ul>
+            <li>AbilityStacks (prevents unintended ability stacking)</li>
+            <li>IFrames</li>
+            <li>HyperArmor</li>
+            <li>Stuns</li>
+            <li>Cooldowns</li>
+            <li>HitExceptions (used for counterattacks)</li>
+            <li>Custom temporary states for ability-specific behavior</li>
+          </ul>
+        </li>
+
+        <li>
+          Player System
+          <ul>
+            <li>Instantiates the Local Player and connects input components</li>
+          </ul>
+        </li>
+
+        <li>Input Components</li>
+
+        <li>
+          Ability Framework
+          <ul>
+            <li>LightAttack (Punch used by both the player and zombies)</li>
+            <li>Block (triggers a Parry if activated shortly before being hit by parryable attacks)</li>
+            <li>Walk</li>
+            <li>Dash</li>
+            <li>Jump</li>
+          </ul>
+        </li>
+
+        <li>
+          Stat Components
+          <ul>
+            <li>Health</li>
+            <li>Gravity</li>
+            <li>Friction</li>
+          </ul>
+        </li>
+
+        <li>
+          Collision Detection Components
+          <ul>
+            <li>Hitbox</li>
+            <li>Ground Check</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Additional Contributions</h3>
+      <ul>
+        <li>General system integration</li>
+        <li>Architecture support</li>
+        <li>Minor gameplay and technical tasks</li>
+      </ul>
     </section>
   </div>
 </body>
