@@ -26,12 +26,163 @@
 
     <section class="project-block">
       <h2>Alpha Exilemet</h2>
-      <p>Project description goes here.</p>
-      
-      <div class="media-grid">
-        <img src="assets/img/example.jpg" alt="Project screenshot">
-        <!-- Or embed YouTube videos using iframe -->
+
+      <p>
+        <strong>Genre:</strong> First-Person Survival Exploration Simulator<br />
+        <strong>Setting:</strong> Realistic Sci-Fi<br />
+        <strong>Development Time:</strong> ~2 months, Ongoing Production Project<br />
+        <strong>Team Size:</strong> 5 Developers
+      </p>
+
+      <p>
+        <strong>Team Composition:</strong><br />
+        2 Programmers • 2 Modelers • 1 UI Designer • 1 Animator • 1 VFX Artist •
+        1 Sound Designer • 1 Game Designer • 1 Producer
+      </p>
+
+      <p>
+        <strong>Role:</strong><br />
+        Gameplay Programmer • VFX Artist
+      </p>
+
+      <p>
+        <strong>Additional Contributions:</strong><br />
+        Model and Animation fixes, Testing.
+      </p>
+
+      <p>
+        Alpha Exilemet is a first-person survival and resource management game set on
+        a hostile alien planet. Players explore an open world, gather materials,
+        upgrade their equipment, and progressively repair their damaged spaceship,
+        the <em>Drakkar</em>, in order to escape.
+      </p>
+
+      <p>
+        I was responsible for the core harvesting gameplay systems, including tools,
+        resources, inventory interactions, and reactive visual feedback.
+      </p>
+
+      <h3>Systems Developed</h3>
+      <ul>
+        <li>
+          Tool System
+          <ul>
+            <li>Base Tool architecture and derived tools</li>
+            <li>Pickaxe (solid resources)</li>
+            <li>Vacuum (liquid resources)</li>
+            <li>Rod (gas resources)</li>
+            <li>Tool stats and upgrades</li>
+            <li>Equip / unequip integration with Character and Animation Blueprint</li>
+            <li>Inventory integration</li>
+          </ul>
+        </li>
+
+        <li>
+          Reactive Tool Visuals
+          <ul>
+            <li>Dynamic effect color changes based on harvested resource colors</li>
+          </ul>
+        </li>
+
+        <li>
+          Resource System
+          <ul>
+            <li>Base Resource architecture and specialized resource classes</li>
+            <li>Solid, Liquid, and Gas resource types</li>
+            <li>Resource stats</li>
+            <li>Damage handling</li>
+            <li>Depletion and regeneration</li>
+            <li>Drop logic</li>
+          </ul>
+        </li>
+
+        <li>
+          Miscellaneous Gameplay Mechanics
+          <ul>
+            <li>Automatic movement acceleration when running toward the base hub</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>
+        The project already includes a playable open world with multiple biomes,
+        upgrade terminals, save/load systems, and a complete progression loop based
+        on exploration, harvesting, and equipment upgrades.
+      </p>
+
+      <div class="project-showcase">
+        <!-- Left Column -->
+        <div class="project-video">
+          <iframe
+            src="https://www.youtube.com/embed/QRnQqnXzuAw"
+            title="Alpha Exilemet Gameplay"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Right Column -->
+        <div class="project-details">
+          <div>
+            <h3>Core Gameplay Loop</h3>
+            <ul>
+              <li>Explore five progressively more dangerous biomes</li>
+              <li>Harvest Solid, Liquid, and Gas resources</li>
+              <li>Sell materials for Krono (in-game currency)</li>
+              <li>Upgrade character and tool stats</li>
+              <li>Repair the Drakkar spaceship</li>
+              <li>Escape the planet</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Open-world exploration</li>
+              <li>Survival mechanics (oxygen management)</li>
+              <li>Upgradeable harvesting tools</li>
+              <li>Economy and progression terminals</li>
+              <li>Environmental challenge portals</li>
+              <li>Story-driven cutscenes</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+      <p>
+        *As of the recording of the video many sounds such as harvesting sounds have yet to be added.
+      </p>
+
+      <h2>Implemented Tools</h2>
+        <p>
+          The harvesting system is built around a shared tool architecture. Each tool
+          interacts with specific resource types while sharing common systems such as
+          stats, inventory integration, upgrades, and equip/unequip logic.
+        </p>
+
+        <ul>
+          <li><strong>Pickaxe</strong> — Harvests solid resources</li>
+          <li><strong>Vacuum</strong> — Collects liquid resources</li>
+          <li><strong>Rod</strong> — Extracts gaseous resources (animations WIP as of recording)</li>
+        </ul>
+
+        <h2>Biomes</h2>
+        <ul>
+          <li>Arid Terrain</li>
+          <li>Canyon</li>
+          <li>Swamp</li>
+          <li>Volcano</li>
+          <li>Frozen Wasteland</li>
+        </ul>
+
+        <h2>Base Hub Terminals</h2>
+        <ul>
+          <li>Sell Terminal</li>
+          <li>Character Upgrade Terminal</li>
+          <li>Tool Upgrade Terminal</li>
+          <li>Shop Terminal</li>
+          <li>Repair Ship Terminal</li>
+        </ul>
     </section>
   </div>
 </body>

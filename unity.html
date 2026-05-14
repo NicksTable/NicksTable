@@ -26,11 +26,172 @@
 
     <section class="project-block">
       <h2>Feline Fantasy</h2>
-      <p>Project description goes here.</p>
+
+      <p>
+        <strong>Genre:</strong> Tactical RPG<br />
+        <strong>Inspiration:</strong> Final Fantasy Tactics<br />
+        <strong>Development Time:</strong> ~2 months<br />
+        <strong>Team Size:</strong> 6 Developers
+      </p>
+
+      <p>
+        <strong>Team Composition:</strong><br />
+        2 Programmers • 2 Artists (3D / 2D) • 1 VFX Artist • 1 Sound Designer •
+        1 Game Designer • 1 Producer
+      </p>
+
+      <p>
+        <strong>Role:</strong><br />
+        Gameplay Programmer • VFX Artist
+      </p>
+
+      <p>
+        Turn-based tactical RPG featuring cats as playable units. Each turn allows
+        control of a single entity selected from a priority-based turn queue,
+        creating a more dynamic flow than traditional “move all units” systems.
+      </p>
+
+      <p>
+        I was primarily responsible for the core gameplay architecture, including
+        grid systems, pathfinding, entity logic, abilities, and combat
+        infrastructure.
+      </p>
+
+      <h3>Systems Developed</h3>
+      <ul>
+        <li>
+          Grid Manager & Grid Nodes
+          <ul>
+            <li>Procedural grid generation and removal with variable dimensions</li>
+            <li>Node height editing with snapping tools and custom gizmos</li>
+            <li>Node coloring based on layered status blending</li>
+          </ul>
+        </li>
+
+        <li>
+          Pathfinding
+          <ul>
+            <li>Dijkstra-based pathfinding with elevation-aware movement costs</li>
+            <li>Movement range limited by Entity.Speed</li>
+          </ul>
+        </li>
+
+        <li>
+          Status System
+          <ul>
+            <li>Generic mutable state containers with optional turn duration</li>
+            <li>Designed to avoid race conditions and support layered effects</li>
+          </ul>
+        </li>
+
+        <li>
+          Ability Framework
+          <ul>
+            <li>Abstract base class with customizable execution steps</li>
+            <li>Handles range visualization, selection, validation, and execution</li>
+          </ul>
+        </li>
+
+        <li>
+          Combat Manager
+          <ul>
+            <li>Centralized validator for ability requests</li>
+            <li>Hit processing and HitResult prediction</li>
+            <li>Supports reactive systems such as counters and interrupts</li>
+          </ul>
+        </li>
+
+        <li>
+          Entity System
+          <ul>
+            <li>Generic character class used for both units and destructible objects</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>
+        In addition to programming, I created three early VFX to learn Unity's
+        particle systems, primarily using VFX Graph.
+      </p>
+
+      <div class="project-showcase">
+        <!-- Left Column -->
+        <div class="project-video">
+          <video controls preload="metadata">
+            <source src="assets/mp4/unity/FelineGame.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Right Column -->
+        <div class="project-details">
+          <div>
+            <h3>Core Features</h3>
+            <ul>
+              <li>Turn-based tactical combat</li>
+              <li>Class triangle: Warrior → Archer → Mage</li>
+              <li>Two abilities per protagonist cat (standard + special)</li>
+              <li>Priority-based turn queue</li>
+              <li>Elevation affects movement cost</li>
+              <li>Tutorial level (Level 0)</li>
+              <li>Grid-based deployment phase</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Planned Features</h3>
+            <ul>
+              <li>Base combat abilities</li>
+              <li>UI Manager</li>
+              <li>Tutorial Manager</li>
+              <li>Dialogue Manager</li>
+              <li>Animations, VFX, and sound integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        The current gameplay video showcases the tutorial level and early gameplay
+        systems. Some cats visible in the deployment phase were spawned manually for
+        testing purposes to demonstrate valid placement positions.
+      </p>
 
       <div class="media-grid">
-        <img src="assets/img/example.jpg" alt="Project screenshot">
-        <!-- Or embed YouTube videos using iframe -->
+        <h2>Early Movement Ability</h2>
+        <p>
+          Uses Dijkstra pathfinding constrained by Entity.Speed, displays reachable
+          nodes, validates target selection, and executes movement. The final version
+          is intended to interpolate unit movement through animations and node-to-node
+          transitions.
+        </p>
+
+        <video controls preload="metadata">
+          <source src="assets/mp4/unity/Movement.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <h2>Grid Tools</h2>
+        <p>
+          Editor tools for procedural grid generation, removal, node height editing,
+          and visualization using custom gizmos.
+        </p>
+
+        <div class="project-showcase">
+          <div class="project-video">
+            <video controls preload="metadata">
+              <source src="assets/mp4/unity/GridManagerButtons.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="project-video">
+            <video controls preload="metadata">
+              <source src="assets/mp4/unity/HeightAndGizmo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -39,7 +200,7 @@
     <section class="project-block">
       <h2>Project Fear</h2>
       <p>
-        <strong>Genre:</strong> Cooperative Survival Horror<br />
+        <strong>Genre:</strong> Beat 'em up Survival Horror<br />
         <strong>Development Time:</strong> ~1.5 months<br />
         <strong>Team Size:</strong> 3 Developers (2 Programmers, 1 Game/Level/Sound Designer)
       </p>
@@ -80,6 +241,9 @@
             <p>
               The gameplay shown in the video does not fully represent the capabilities of the implemented systems,
               as the project was still under active development at the time of recording.
+              The visuals are also due for some heavy polishing
+              and are not representative of the final quality
+              we aimed to achieve, due to time constraints.
             </p>
           </div>
         </div>
