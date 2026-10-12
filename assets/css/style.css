@@ -1,20 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap');
+
+/* Glacial Indifference: the CV typeface, self-hosted (SIL OFL 1.1, see assets/fonts/OFL.txt) */
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../fonts/GlacialIndifference-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../fonts/GlacialIndifference-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
-  --bg-1: #3a004d;
-  --bg-2: #22001a;
-  --bg-3: #060408;
+  /* Bordeaux is atmosphere only (background, glow, card fills), never text.
+     Gold is the accent. Never lighten the reds: they turn pink. */
+  --bg-1: #2e070c;
+  --bg-2: #170709;
+  --bg-3: #0b0606;
 
-  --text: #fffceb;
-  --muted: #9a9a9a;
+  --text: #f3efe6;
+  --muted: #b3aaa1;
 
-  --accent: #fff200;
-  --accent-soft: #fff8a6;
+  --accent: #c9a24a;
+  --accent-soft: #e2c98a;
+  --on-accent: #1a0d0f;
 
-  --link: #6cb8ff;
+  --link: var(--accent-soft);
 
-  --border: rgba(255, 255, 255, 0.09);
-  --card-bg: rgba(8, 0, 18, 0.55);
+  --wine: #7a1018;
+  --rule: rgba(201, 162, 74, 0.45);
+  --border: rgba(201, 162, 74, 0.14);
+  --card-bg: rgba(18, 6, 8, 0.62);
+
+  --font-head: 'Glacial Indifference', 'Century Gothic', sans-serif;
+  --font-body: 'Atkinson Hyperlegible Next', sans-serif;
 
   --radius: 10px;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
@@ -32,13 +57,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.7;
   color: var(--text);
   background:
-    radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    radial-gradient(ellipse 65% 45% at 85% 8%, rgba(255, 242, 0, 0.07), transparent),
-    radial-gradient(ellipse 55% 65% at 8% 75%, rgba(110, 0, 190, 0.22), transparent),
+    radial-gradient(rgba(201, 162, 74, 0.045) 1px, transparent 1px),
+    radial-gradient(ellipse 65% 45% at 85% 8%, rgba(201, 162, 74, 0.06), transparent),
+    radial-gradient(ellipse 55% 65% at 8% 75%, rgba(122, 16, 24, 0.3), transparent),
     linear-gradient(158deg, var(--bg-1) 0%, var(--bg-2) 52%, var(--bg-3) 100%);
   background-size: 28px 28px, 100% 100%, 100% 100%, 100% 100%;
   background-attachment: fixed;
@@ -63,7 +88,7 @@ iframe {
   top: 0;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(4, 0, 10, 0.6);
+  background: rgba(11, 6, 6, 0.72);
   border-bottom: 1px solid var(--border);
   z-index: 100;
 }
@@ -75,25 +100,30 @@ iframe {
   padding: 0.9rem 0;
 }
 
+/* The wordmark sits on a "table": a gold hairline with two short inset legs */
 .logo {
-  font-family: 'JetBrains Mono', monospace;
+  display: inline-block;
+  position: relative;
+  padding: 0 0.2rem 0.6rem;
+  font-family: var(--font-head);
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--text);
   text-decoration: none;
-  letter-spacing: -0.02em;
-}
-
-.logo::before {
-  content: '[ ';
-  color: var(--accent);
-  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .logo::after {
-  content: ' ]';
-  color: var(--accent);
-  font-weight: 400;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.42rem;
+  border-top: 1px solid var(--accent);
+  background:
+    linear-gradient(var(--accent), var(--accent)) 14% 0 / 1px 100% no-repeat,
+    linear-gradient(var(--accent), var(--accent)) 86% 0 / 1px 100% no-repeat;
 }
 
 a {
@@ -154,23 +184,24 @@ a {
   letter-spacing: 0.16em;
   margin-bottom: 1.5rem;
   padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(255, 242, 0, 0.28);
+  border-bottom: 1px solid var(--rule);
 }
 
 h1 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-head);
   font-size: clamp(3.2rem, 10vw, 6.5rem);
   line-height: 0.92;
   margin: 0 0 0.55em;
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.01em;
 }
 
 h2 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-head);
   color: var(--accent);
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .subtitle {
@@ -193,7 +224,7 @@ h2 {
   padding: 0.7rem 1.4rem;
   border-radius: var(--radius);
   background: var(--accent);
-  color: #111;
+  color: var(--on-accent);
   font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 0.02em;
@@ -213,7 +244,7 @@ h2 {
 
 .button-secondary:hover {
   color: var(--text);
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: var(--rule);
   opacity: 1;
 }
 
@@ -250,8 +281,8 @@ h2 {
 }
 
 .card:hover {
-  border-color: rgba(255, 242, 0, 0.32);
-  box-shadow: 0 0 0 1px rgba(255, 242, 0, 0.1), var(--shadow);
+  border-color: rgba(201, 162, 74, 0.38);
+  box-shadow: 0 0 0 1px rgba(201, 162, 74, 0.08), 0 8px 32px rgba(122, 16, 24, 0.35), var(--shadow);
   transform: translateY(-2px);
 }
 
@@ -287,6 +318,9 @@ h2 {
 
 .back-link {
   color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 0.2em;
   font-size: 0.875rem;
   display: inline-block;
   margin-bottom: 2rem;
@@ -295,6 +329,27 @@ h2 {
 
 .back-link:hover {
   color: var(--accent-soft);
+  text-decoration-color: var(--accent-soft);
+}
+
+/* Gold hairline under section titles, as in the CV */
+.page h2 {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .media-grid {
@@ -362,10 +417,10 @@ h2 {
   margin-top: 0;
   margin-bottom: 0.75rem;
   color: var(--accent);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-head);
   font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  letter-spacing: 0;
   line-height: 1.2;
 }
 
