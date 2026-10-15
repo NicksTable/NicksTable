@@ -332,6 +332,20 @@ h2 {
   text-decoration-color: var(--accent-soft);
 }
 
+/* Links inside running text and lists: same look as .back-link, no block spacing */
+.inline-link {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 0.2em;
+  transition: color 0.18s, text-decoration-color 0.18s;
+}
+
+.inline-link:hover {
+  color: var(--accent-soft);
+  text-decoration-color: var(--accent-soft);
+}
+
 /* Gold hairline under section titles, as in the CV */
 .page h2 {
   padding-bottom: 0.35rem;
